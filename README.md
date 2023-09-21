@@ -60,6 +60,6 @@ The required data format is presented in the xxx format.
 
 ### 3.2 Predicting step  
 After the training is complete, the model parameter files will be saved to outSavePath. If you wish to use this model for prediction, you only need to execute a single command:  
-```python run_mymodel.py --device cuda:0 --batchSize 512 --Mode eval --paraDictPath ./yourOutPath/paraDict.pt --StatdictPath ./yourOutPath/bestStateDict.pt --DataSetPath  ./testDataSet.pt```
+```python run_mymodel.py --device cuda:0 --batchSize 512 --Mode eval --paraDictPath ./yourOutPath/paraDict.pt --StatdictPath ./yourOutPath/bestStateDict.pt --DataSetPath  ./OutPath/testDataSet.pt```
 
 
