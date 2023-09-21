@@ -1,6 +1,8 @@
 # DSpaLaRefiner
 A data space landmark refiner deep learning algorithm, which serves as an interpretable approach employed for the construction of auxiliary diagnostic model.
-![Figure1](https://github.com/Lvxiang713/DSpaLaRefiner/assets/119480930/5080abb9-1b92-415e-aff3-932c193c2757)
+![Figure1](https://github.com/Lvxiang713/DspaLaRefiner/assets/119480930/97ac95a9-c066-4f20-9a7b-fe6aa052830b)
+
+
 ## 1.Brief Introduction
 The basic concept of DSpaLaRefiner is to generate multiple pseudo data points, named Landmarks, in data space, and make the classification using the distance between the landmarks and the data. Inspired by the concept of SVM, gaussian radial basis function is employed as the distance measurement. The distances are used as the references for the final classification. The Landmarks act similar role with support vectors in SVM, but the positions and related weights of landmarks can be optimized by deep learning optimizers using the cross-entropy loss function, which gives DSpaLaRefiner the ability to refine the pseudo points to Landmarks. This document is a guide for users to get touch with ‘DSpaLaRefiner’ for modeling and analysis of electronic health records(EHRs).
 ## 2.Installation
