@@ -1,0 +1,1 @@
+"This is the de-identified electronic health records of SWMU and NSMC using in this work.   Each row represents a record, and each column represents a physical examination indicator.    If you wish to use this data for other research or purposes, please contact us at LX7381@gmail.com."
