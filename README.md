@@ -56,7 +56,7 @@ optional arguments:
 </pre>  
 After reading the parameter overview above, you can customize the parameters for training. For example:  
 ```python run_mymodel.py --dataPath ./SplitData/data_hospital_11_0.pt --outSavePath ./yourOutPath --device cuda:0 --batchSize 512 --performWDDOpt --WDDlossRate 0 --tRatio 1 --epoches 5000 --lr_init 0.001 --earlyStopThres 100 --Mode train```    
-The required data format is presented in the xxx format.  
+The required data format for training is presented in the ./SplitData/requiredDataFormat.ipynb.  
 
 ### 3.2 Predicting step  
 After the training is complete, the model parameter files will be saved to outSavePath. If you wish to use this model for prediction, you only need to execute a single command:  
