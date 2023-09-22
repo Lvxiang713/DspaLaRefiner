@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 24 13:49:46 2023
-
-@author: tmp
+@author: LvXiang, JingRunyu
 """
 import numpy as np
 import torch
@@ -35,7 +34,14 @@ class MyLoss(torch.nn.Module):
 
 class WDD(nn.Module):
     '''
-    optimize a point which will be close to positive dataset and be away to negative dataset as possible
+    This module serves as the core component of DSpaLaRefiner, 
+    designed to optimize Landmarks and define the distance metrics between data and Landmarks. 
+    It's important to note that each category should correspond to a WDD (Weighted Distance Descriptor) object,
+    meaning that the total number of initialized WDDs should match the number of classification categories. 
+    The core parameters of this model include:
+    w: Represents the feature weights for each Landmark. (nt*f)
+    t: Denotes the positions of the Landmarks. (nt*f)
+    gamma: Refers to the gamma parameter in radial basis distance computation.
     '''
     def __init__(self,input_features,alpha,gamma,delta,device = 'cuda:0',
                  dtype=torch.float32, earlyStopThres = 100,computeMode='Di',
@@ -227,6 +233,14 @@ class WDD(nn.Module):
     
 
 class WrappedModel(nn.Module):
+    '''This module defines the structure of the forward procession, 
+    primarily comprising the WDD (Weighted Distance Descriptor) module and the VotingLayer module, 
+    along with the activation function for the probability output layer. 
+    The number of instances of both modules is equivalent to the number of classes or labels, denoted as numClass.
+    
+    The VotingLayer module, in particular, essentially functions as a fully connected layer, 
+    where the weights correspond to the significance of Landmarks.
+    In other words, the absolute magnitude of the weights indicates the extent to which a particular Landmark influences the final classification outcome.'''
     
     def __init__(self,input_features,numClass,gamma=2**0,alpha=2**0,delta=2**0,device = 'cuda:0',
                  dtype=torch.float32, earlyStopThres = 100,computeMode='Di',

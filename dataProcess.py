@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jun 26 14:51:30 2023
-
-@author: tmp
+@author:LvXiang, JingRunyu
 """
 import torch
 import os, re, copy
