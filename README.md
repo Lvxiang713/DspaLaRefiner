@@ -1,6 +1,7 @@
 # DSpaLaRefiner
 A data space landmark refiner deep learning algorithm, which serves as an interpretable approach employed for the construction of auxiliary diagnostic model.
-![Figure1](https://github.com/Lvxiang713/DspaLaRefiner/assets/119480930/97ac95a9-c066-4f20-9a7b-fe6aa052830b)
+![Figure1](https://github.com/Lvxiang713/DspaLaRefiner/assets/119480930/4eda18e6-c645-48d0-adb1-ec9be77cc091)
+
 
 
 ## 1.Brief Introduction
@@ -60,6 +61,12 @@ The required data format for training is presented in the ./SplitData/requiredDa
 
 ### 3.2 Predicting step  
 After the training is complete, the model parameter files will be saved to outSavePath. If you wish to use this model for prediction, you only need to execute a single command:  
-```python run_mymodel.py --device cuda:0 --batchSize 512 --Mode eval --paraDictPath ./yourOutPath/paraDict.pt --StatdictPath ./yourOutPath/bestStateDict.pt --DataSetPath  ./OutPath/testDataSet.pt```
+```python run_mymodel.py --device cuda:0 --batchSize 512 --Mode eval --paraDictPath ./yourOutPath/paraDict.pt --StatdictPath ./yourOutPath/bestStateDict.pt --DataSetPath  ./OutPath/testDataSet.pt```  
+
+## 4 Interpretability analysis
+The visualization code for the interpretability analysis section is stored in the 'Analysis' folder. It includes visualizations of the model training optimization process and interpretability analysis at the sample and feature levels.
+
+## 5 Conclusion
+This document is provided for users to know DSpaLaRefiner. As an open source algorithm, we have documented all the code and the functio  For more details, please see the word file 'manual.docx'.  We looking forward to receiving any bug reports and suggestions, please feel free to contact us anytime. (LX7381@gmail.com)
 
 
