@@ -1,6 +1,7 @@
 # DSpaLaRefiner
 A data space landmark refiner deep learning algorithm, which serves as an interpretable approach employed for the construction of auxiliary diagnostic model.
-![Figure1](https://github.com/Lvxiang713/DspaLaRefiner/assets/119480930/4eda18e6-c645-48d0-adb1-ec9be77cc091)
+
+![Figure1](https://github.com/Lvxiang713/DspaLaRefiner/assets/119480930/ee799769-8b47-43a5-8a44-93ca328cdae6)
 
 
 
