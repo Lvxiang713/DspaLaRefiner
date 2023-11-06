@@ -557,7 +557,7 @@ class WrappedModel(nn.Module):
                     tmpProb = DiscLayer(tmpDist.transpose(1,0)) / WDDObj.numT * self.vote_scale
                     probs.append(tmpProb)
             clsLabel = torch.cat(probs,dim=1) # n * 2
-            clsLabel = self.lastAct(clsLabel)
+            #clsLabel = self.lastAct(clsLabel)
             batchClsLoss = self.computeLoss(clsLabel, yb)
             tmpLoss = self.WDDlossRate*batchTLoss + batchClsLoss 
             if self.training:
